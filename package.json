@@ -1,0 +1,35 @@
+{
+  "name": "restify-json-body-parser",
+  "version": "0.1.0",
+  "description": "JSON body parser middleware for restify",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/harrisiirak/restify-json-body-parser.git"
+  },
+  "keywords": [
+    "json",
+    "restify",
+    "middleware"
+  ],
+  "author": "Harri Siirak <harri.siirak@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harrisiirak/restify-json-body-parser/issues"
+  },
+  "homepage": "https://github.com/harrisiirak/restify-json-body-parser",
+  "peerDependencies": {
+    "restify": "~2.6.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.1",
+    "supertest": "~0.9.0",
+    "must": "~0.11.0"
+  },
+  "dependencies": {
+    "restify-plugin-body-reader": "~2.6.1"
+  }
+}
