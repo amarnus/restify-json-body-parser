@@ -2,17 +2,17 @@ var restify = require('restify');
 var bodyReader = require('restify-plugin-body-reader');
 
 module.exports = function jsonParser (options) {
-  var pass = false;
-
   return [
     function reader (req, res, next) {
+      req._parseBody = true;
+
       if (req.method === 'HEAD') {
-        pass = true;
+        req._parseBody = false;
         return next();
       }
 
       if (req.contentLength() === 0 && !req.isChunked()) {
-        pass = true;
+        req._parseBody = false;
         return next();
       }
 
@@ -24,13 +24,13 @@ module.exports = function jsonParser (options) {
           return bodyReader(options)(req, res, next);
         }
       } else {
-        pass = true;
+        req._parseBody = false;
         return next();
       }
     },
 
     function parser (req, res, next) {
-      if (!pass) {
+      if (req._parseBody) {
         try {
           req.body = JSON.parse(req.body);
         } catch (e) {
