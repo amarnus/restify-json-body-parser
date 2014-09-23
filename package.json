@@ -21,9 +21,6 @@
     "url": "https://github.com/harrisiirak/restify-json-body-parser/issues"
   },
   "homepage": "https://github.com/harrisiirak/restify-json-body-parser",
-  "peerDependencies": {
-    "restify": "git://github.com/amarnus/node-restify.git"
-  },
   "devDependencies": {
     "mocha": "^1.21.4",
     "must": "^0.12.0",
