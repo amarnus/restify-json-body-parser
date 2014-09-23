@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/harrisiirak/restify-json-body-parser",
   "peerDependencies": {
-    "restify": "git://github.com/amarnus/node-restify"
+    "restify": "git://github.com/amarnus/node-restify.git"
   },
   "devDependencies": {
     "mocha": "^1.21.4",
@@ -30,7 +30,7 @@
     "supertest": "^0.13.0"
   },
   "dependencies": {
-    "restify": "git://github.com/amarnus/node-restify",
+    "restify": "git://github.com/amarnus/node-restify.git",
     "restify-plugin-body-reader": "~2.6.1"
   }
 }
